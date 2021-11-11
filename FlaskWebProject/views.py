@@ -22,10 +22,8 @@ imageSourceUrl = 'https://'+ app.config['BLOB_ACCOUNT']  + '.blob.core.windows.n
 @login_required
 def home():
     user = User.query.filter_by(username=current_user.username).first_or_404()
-    app.logger.warning(user)
-    app.logger.warning(current_user.username)
     posts = Post.query.all()
-    if user == 'admin':
+    if current_user.username == 'admin':
         app.logger.info('admin logged in successfully')
     else:
         app.logger.warning('Invalid login attempt')

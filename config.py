@@ -10,7 +10,7 @@ class Config(object):
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
 
     SQL_SERVER = os.environ.get('SQL_SERVER') or 'articlecms.database.windows.net'
-    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'articlecms'
+    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'project'
     SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'udacityadmin'
     SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'udac@123'
     # Below URI may need some adjustments for driver version, based on your OS, if running locally

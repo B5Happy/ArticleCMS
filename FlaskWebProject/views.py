@@ -23,11 +23,7 @@ imageSourceUrl = 'https://'+ app.config['BLOB_ACCOUNT']  + '.blob.core.windows.n
 def home():
     user = User.query.filter_by(username=current_user.username).first_or_404()
     posts = Post.query.all()
-    if current_user.username == 'admin':
-        app.logger.info('admin logged in successfully')
-    else:
-        app.logger.warning('Invalid login attempt')
-            
+
     return render_template(
         'index.html',
         title='Home Page',
@@ -67,6 +63,10 @@ def post(id):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.username == 'admin':
+        app.logger.warning('admin logged in successfully')
+    else:
+        app.logger.warning('Invalid login attempt')
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = LoginForm()

@@ -24,6 +24,7 @@ pyodbc==4.0.28
 pyopenssl==19.1.0
 python-dateutil==2.8.1
 python-editor==1.0.4
+psycopg2-binary==2.7.7
 requests==2.22.0
 setuptools==39.0.1
 six==1.14.0

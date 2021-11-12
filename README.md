@@ -12,3 +12,4 @@ Or, once the MS Login button is implemented, it will automatically log into the 
 ## App on Azure
 
 The app is currently running on : http://cmsproject4.azurewebsites.net/
+You can see the first post photo here : https://udacityimage.blob.core.windows.net/images/K9LJXFGAHUKM7COWVX36DKCOVJ1KC6H4.jpg
